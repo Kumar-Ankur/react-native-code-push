@@ -1,5 +1,6 @@
 package com.microsoft.codepush.react;
 
+import android.util.Log;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
