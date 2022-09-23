@@ -156,6 +156,12 @@ public class FileUtils {
             byte[] buffer = new byte[WRITE_BUFFER_SIZE];
             while ((entry = zipStream.getNextEntry()) != null) {
                 String fileName = validateFileName(entry.getName(), destinationFolder);
+                Log.d("ankur1", fileName);
+                if(fileName.contains("index.android.bundle")) {
+                   Log.d("ankur1", fileName);
+                   fileName = fileName.replace("index.android.bundle", "aa.index.android.bundle");
+                   Log.d("ankur2", fileName);
+                }
                 File file = new File(fileName);
                 if (entry.isDirectory()) {
                     file.mkdirs();
